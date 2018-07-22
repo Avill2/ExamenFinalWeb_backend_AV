@@ -3,7 +3,7 @@ import {NoEncontradoException} from "../Exceptions/noEncontrado.exception"
 
 import * as Joi from 'joi';
 @Injectable()
-export class MateriaPipe implements PipeTransform{
+export class SOPipe implements PipeTransform{
     constructor (private readonly _schema){
     }
     transform(valorSO: any, metadata: ArgumentMetadata){

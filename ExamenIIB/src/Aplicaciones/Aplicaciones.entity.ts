@@ -3,25 +3,33 @@ import {SOEntity} from '../SistemaOperativo/SO.entity';
 
 @Entity('aplicaciones')
 export class AplicacionesEntity{
-    @PrimaryGeneratedColumn() id: number;
+    @PrimaryGeneratedColumn()
+    id_app: number;
+
     @Column()
     pesoEnGigas: number;
+
     @Column()
     version: number;
-    @Column({length: 500})
-    nombre: string;
-    @Column({length: 500})
+
+    @Column()
+    nombres: string;
+
+    @Column()
     urlDescarga: string;
-    @Column({length: 100})
-    fechaLanzamiento: string;
+
+    @Column()
+    fechaLanzamiento: Date;
+
     @Column()
     costo: number;
-    @Column()
-    estado: boolean;
-    @Column({length: 500})
-    urlAplicacion: string;
 
-    @ManyToOne(type => SOEntity,
-        so=>so.aplicacionId)
-    so:SOEntity;
+    @Column()
+    urlFotoApp: string;
+
+    @ManyToOne(
+        type => SOEntity,
+        soEntity=>soEntity.aplicacionId)
+    sistemaOperativoId:number;
+
 }

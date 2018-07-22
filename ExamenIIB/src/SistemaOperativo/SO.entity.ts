@@ -9,10 +9,10 @@ export class SOEntity{
     nombre: string;
 
     @Column()
-    versionApi: number;
+    versionApi: string;
 
     @Column({length: 500})
-    fechaLanzamiento: string;
+    fechaLanzamiento: Date;
 
     @Column()
     pesoEnGigas: number;

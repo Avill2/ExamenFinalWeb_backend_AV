@@ -24,7 +24,7 @@ export class UsuarioService {
 
     crearUsuario(usuario: Usuario){
         const user = new UsuarioEntity();
-        user.nombre_usuario = usuario.nombre;
+        user.nombre_usuario = usuario.nombres;
         user.urlFoto = usuario.urlFoto;
         //this.connection.manager.save(user);
         this.usuarioRepository.save(user);
