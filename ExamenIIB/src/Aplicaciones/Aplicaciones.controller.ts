@@ -18,7 +18,7 @@ export  class AplicacionesController {
         @Body('id')id,
         @Body('pesoEnGigas')pesoEnGigas,
         @Body('version')version,
-        @Body('nombre')nombre,
+        @Body('nombres')nombre,
         @Body('urlDescarga')urlDescarga,
         @Body('fechaLanzamiento')fechaLanzamiento,
         @Body('costo')costo,
